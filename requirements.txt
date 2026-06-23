@@ -1,0 +1,24 @@
+# GPU PyTorch (CUDA 12.6) — install with: pip install -r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.6.0+cu126
+torchvision==0.21.0+cu126
+torchaudio==2.6.0+cu126
+
+numpy==2.4.4
+opencv-python==4.13.0.92
+openpyxl==3.1.5
+pandas==3.0.2
+pillow==12.2.0
+scipy>=1.10.0
+typing_extensions==4.15.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+et_xmlfile==2.0.0
+fsspec==2026.3.0
+filelock==3.25.2
+sympy==1.13.1
+networkx==3.6.1
+mpmath==1.3.0
+tqdm>=4.65.0
+matplotlib>=3.7.0
+scikit-learn>=1.2.0

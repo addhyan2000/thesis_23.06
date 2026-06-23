@@ -1,0 +1,5 @@
+source,reference,method,dataset,label_setup,validation,accuracy,macro_f1,notes
+literature,Li et al. 2018 (STSTNet),3D-CNN multi-stream,CASME-II,individual emotions,LOSO,0.63,,Update from client Papers folder
+literature,Vivian et al. 2019 (ME recognition survey),hand-crafted + CNN,CASME-II,3-class grouped,LOSO,0.58,,Illustrative — verify against paper
+literature,Example Transformer MER,CNN + Transformer,CASME-II,3-class grouped,LOSO,0.65,,Replace with exact paper client shares
+literature,Target dissertation goal,proposed unified pipeline,CASME-II,3-class grouped,LOSO,0.70,0.68,Client target for final project phase
