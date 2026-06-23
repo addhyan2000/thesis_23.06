@@ -1,0 +1,10 @@
+Dataset,Subject_ID,Video_ID,Raw_Emotion,Unified_Emotion,Expression_Type
+CASME_II,1,clip_1_1,disgust,Negative,micro-expression
+CASME_II,1,clip_1_2,positive,Positive,micro-expression
+CASME_II,1,clip_1_3,surprise,Surprise,micro-expression
+CASME_II,2,clip_2_1,disgust,Negative,micro-expression
+CASME_II,2,clip_2_2,positive,Positive,micro-expression
+CASME_II,2,clip_2_3,surprise,Surprise,micro-expression
+CASME_II,3,clip_3_1,disgust,Negative,micro-expression
+CASME_II,3,clip_3_2,positive,Positive,micro-expression
+CASME_II,3,clip_3_3,surprise,Surprise,micro-expression

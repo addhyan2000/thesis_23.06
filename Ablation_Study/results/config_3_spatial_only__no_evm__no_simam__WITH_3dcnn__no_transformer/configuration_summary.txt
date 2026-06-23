@@ -1,0 +1,22 @@
+Configuration: config_3_spatial_only__no_evm__no_simam__WITH_3dcnn__no_transformer
+========================================
+
+Toggles:
+  use_evm: False
+  use_simam: False
+  use_cnn: True
+  use_transformer: False
+
+Hardware Metrics:
+  Total Train Time: 27.64 seconds
+  Peak VRAM: 7379.2 MB
+
+Data Flow:
+Stage A - Spatial Stem:
+  [B, 3, 32, 224, 224] -> ThreeStreamCNNBackbone -> [B, 96, 32, 112, 112]
+  [B, 96, 32, 112, 112] -> AdaptiveAvgPool3d(32, 1, 1) -> [B, 96, 32, 1, 1]
+  [B, 96, 32, 1, 1] -> squeeze & permute -> [B, 32, 96]
+Stage B - Temporal Encoder:
+  [B, 32, 96] -> TemporalPooling -> [B, 96]
+Stage C - Classifier Head:
+  [B, 96] -> LayerNorm -> Dropout -> Linear -> [B, num_classes]

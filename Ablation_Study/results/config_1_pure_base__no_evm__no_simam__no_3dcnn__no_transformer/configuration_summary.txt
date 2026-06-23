@@ -1,0 +1,20 @@
+Configuration: config_1_pure_base__no_evm__no_simam__no_3dcnn__no_transformer
+========================================
+
+Toggles:
+  use_evm: False
+  use_simam: False
+  use_cnn: False
+  use_transformer: False
+
+Hardware Metrics:
+  Total Train Time: 2.29 seconds
+  Peak VRAM: 91.4 MB
+
+Data Flow:
+Stage A - Spatial Stem:
+  [B, 3, 32, 224, 224] -> RawPatchEmbedding -> [B, 32, 96]
+Stage B - Temporal Encoder:
+  [B, 32, 96] -> TemporalPooling -> [B, 96]
+Stage C - Classifier Head:
+  [B, 96] -> LayerNorm -> Dropout -> Linear -> [B, num_classes]

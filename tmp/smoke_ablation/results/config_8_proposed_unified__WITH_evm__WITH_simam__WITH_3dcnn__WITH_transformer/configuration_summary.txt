@@ -1,0 +1,23 @@
+Configuration: config_8_proposed_unified__WITH_evm__WITH_simam__WITH_3dcnn__WITH_transformer
+========================================
+
+Toggles:
+  use_evm: True
+  use_simam: True
+  use_cnn: True
+  use_transformer: True
+
+Hardware Metrics:
+  Total Train Time: 0.50 seconds
+  Peak VRAM: 0.0 MB
+
+Data Flow:
+Stage A - Spatial Stem:
+  [B, 3, 32, 224, 224] -> ThreeStreamCNNBackbone -> [B, 96, 32, 112, 112]
+  (SimAM attention applied internally to feature maps)
+  [B, 96, 32, 112, 112] -> AdaptiveAvgPool3d(32, 1, 1) -> [B, 96, 32, 1, 1]
+  [B, 96, 32, 1, 1] -> squeeze & permute -> [B, 32, 96]
+Stage B - Temporal Encoder:
+  [B, 32, 96] -> SLSTTTransformer -> [B, 96]
+Stage C - Classifier Head:
+  [B, 96] -> LayerNorm -> Dropout -> Linear -> [B, num_classes]

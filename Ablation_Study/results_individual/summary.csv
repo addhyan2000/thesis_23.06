@@ -1,0 +1,3 @@
+config_name,use_evm,use_simam,use_cnn,use_transformer,accuracy,macro_f1,num_samples
+config_1_pure_base__no_evm__no_simam__no_3dcnn__no_transformer,False,False,False,False,0.2564,0.0680,39
+config_8_proposed_unified__WITH_evm__WITH_simam__WITH_3dcnn__WITH_transformer,True,True,True,True,0.0256,0.0083,39

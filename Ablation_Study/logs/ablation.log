@@ -1,0 +1,206 @@
+14:10:46 | AblationOrchestrator | ==============================================================================
+14:10:46 | AblationOrchestrator |   Ablation Orchestrator
+14:10:46 | AblationOrchestrator |   device=cpu | label_mode=grouped | classes=['Negative', 'Positive', 'Surprise'] | dataset_filter=CASME_II | expr_filter=micro-expression
+14:10:46 | AblationOrchestrator |   protocol=holdout | epochs=1 | batch=2 | loss=focal
+14:10:46 | AblationOrchestrator | ==============================================================================
+14:10:46 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:10:46 | AblationOrchestrator | CONFIG config_1_pure_base [phase I] | -EVM -SimAM -CNN3D -SLSTT
+14:10:46 | AblationOrchestrator | Loaded CSV: 9 rows
+14:10:46 | AblationOrchestrator | Dataset filter 'CASME_II' -> 9 rows
+14:10:46 | AblationOrchestrator | Expression filter 'micro-expression' -> 9 rows
+14:10:46 | AblationOrchestrator | Tensor matching: matched=9 missing=0 unknown_emotion=0
+14:10:46 | AblationOrchestrator | Dataset ready: 9 samples | 3 classes | 3 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/tensors_raw
+14:10:46 | AblationOrchestrator | Subject-disjoint split (seed=42): train=2 subj/6 samp | val=1 subj/3 samp | val_subjects=[2]
+14:10:46 | AblationOrchestrator | Loaded CSV: 9 rows
+14:10:46 | AblationOrchestrator | Dataset filter 'CASME_II' -> 9 rows
+14:10:46 | AblationOrchestrator | Expression filter 'micro-expression' -> 9 rows
+14:10:46 | AblationOrchestrator | Tensor matching: matched=9 missing=0 unknown_emotion=0
+14:10:46 | AblationOrchestrator | Dataset ready: 9 samples | 3 classes | 3 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/tensors_raw
+14:10:46 | AblationOrchestrator |   components={'cnn_backbone': False, 'simam_attention': False, 'transformer': False} | trainable_params=5187
+14:10:47 | AblationOrchestrator | epoch   1/1 | train_loss=2.2301 | val_loss=1.9733 | val_acc=0.3333 | val_macroF1=0.1667 | time=0.4s
+14:10:47 | AblationOrchestrator | Best epoch 1 -> val_acc=0.3333 | val_macroF1=0.1667 | Peak VRAM: 0.0 MB
+14:10:47 | AblationOrchestrator |   RESULT config_1_pure_base -> acc=0.3333 | macroF1=0.1667
+14:10:47 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:10:47 | AblationOrchestrator | CONFIG config_3_spatial_only [phase I] | -EVM -SimAM +CNN3D -SLSTT
+14:10:47 | AblationOrchestrator | Subject-disjoint split (seed=42): train=2 subj/6 samp | val=1 subj/3 samp | val_subjects=[2]
+14:10:47 | AblationOrchestrator | Loaded CSV: 9 rows
+14:10:47 | AblationOrchestrator | Dataset filter 'CASME_II' -> 9 rows
+14:10:47 | AblationOrchestrator | Expression filter 'micro-expression' -> 9 rows
+14:10:47 | AblationOrchestrator | Tensor matching: matched=9 missing=0 unknown_emotion=0
+14:10:47 | AblationOrchestrator | Dataset ready: 9 samples | 3 classes | 3 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/tensors_raw
+14:10:47 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': False, 'transformer': False} | trainable_params=15027
+14:10:48 | AblationOrchestrator | epoch   1/1 | train_loss=0.6007 | val_loss=0.5689 | val_acc=0.3333 | val_macroF1=0.1667 | time=0.5s
+14:10:48 | AblationOrchestrator | Best epoch 1 -> val_acc=0.3333 | val_macroF1=0.1667 | Peak VRAM: 0.0 MB
+14:10:48 | AblationOrchestrator |   RESULT config_3_spatial_only -> acc=0.3333 | macroF1=0.1667
+14:10:48 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:10:48 | AblationOrchestrator | CONFIG config_7_full_no_attention [phase III] | +EVM -SimAM +CNN3D +SLSTT
+14:10:48 | AblationOrchestrator | Loaded CSV: 9 rows
+14:10:48 | AblationOrchestrator | Dataset filter 'CASME_II' -> 9 rows
+14:10:48 | AblationOrchestrator | Expression filter 'micro-expression' -> 9 rows
+14:10:48 | AblationOrchestrator | Tensor matching: matched=9 missing=0 unknown_emotion=0
+14:10:48 | AblationOrchestrator | Dataset ready: 9 samples | 3 classes | 3 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/tensors
+14:10:48 | AblationOrchestrator | Subject-disjoint split (seed=42): train=2 subj/6 samp | val=1 subj/3 samp | val_subjects=[2]
+14:10:48 | AblationOrchestrator | Loaded CSV: 9 rows
+14:10:48 | AblationOrchestrator | Dataset filter 'CASME_II' -> 9 rows
+14:10:48 | AblationOrchestrator | Expression filter 'micro-expression' -> 9 rows
+14:10:48 | AblationOrchestrator | Tensor matching: matched=9 missing=0 unknown_emotion=0
+14:10:48 | AblationOrchestrator | Dataset ready: 9 samples | 3 classes | 3 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/tensors
+14:10:48 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': False, 'transformer': True} | trainable_params=363763
+14:10:48 | AblationOrchestrator | epoch   1/1 | train_loss=2.0248 | val_loss=1.3041 | val_acc=0.3333 | val_macroF1=0.1667 | time=0.4s
+14:10:48 | AblationOrchestrator | Best epoch 1 -> val_acc=0.3333 | val_macroF1=0.1667 | Peak VRAM: 0.0 MB
+14:10:48 | AblationOrchestrator |   RESULT config_7_full_no_attention -> acc=0.3333 | macroF1=0.1667
+14:10:49 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:10:49 | AblationOrchestrator | CONFIG config_8_proposed_unified [phase IV] | +EVM +SimAM +CNN3D +SLSTT
+14:10:49 | AblationOrchestrator | Subject-disjoint split (seed=42): train=2 subj/6 samp | val=1 subj/3 samp | val_subjects=[2]
+14:10:49 | AblationOrchestrator | Loaded CSV: 9 rows
+14:10:49 | AblationOrchestrator | Dataset filter 'CASME_II' -> 9 rows
+14:10:49 | AblationOrchestrator | Expression filter 'micro-expression' -> 9 rows
+14:10:49 | AblationOrchestrator | Tensor matching: matched=9 missing=0 unknown_emotion=0
+14:10:49 | AblationOrchestrator | Dataset ready: 9 samples | 3 classes | 3 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/tensors
+14:10:49 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': True, 'transformer': True} | trainable_params=363763
+14:10:49 | AblationOrchestrator | epoch   1/1 | train_loss=1.9832 | val_loss=1.2802 | val_acc=0.3333 | val_macroF1=0.1667 | time=0.5s
+14:10:49 | AblationOrchestrator | Best epoch 1 -> val_acc=0.3333 | val_macroF1=0.1667 | Peak VRAM: 0.0 MB
+14:10:49 | AblationOrchestrator |   RESULT config_8_proposed_unified -> acc=0.3333 | macroF1=0.1667
+14:10:49 | AblationOrchestrator | ==============================================================================
+14:10:49 | AblationOrchestrator |   Ablation sweep complete. Summary CSV: /home/pantaddh/Desktop/Addy thesis/Thesis latest4/tmp/smoke_ablation/results/summary.csv
+14:10:49 | AblationOrchestrator | ==============================================================================
+14:10:52 | AblationOrchestrator | ==============================================================================
+14:10:52 | AblationOrchestrator |   Ablation Orchestrator
+14:10:52 | AblationOrchestrator |   device=cuda | label_mode=grouped | classes=['Negative', 'Positive', 'Surprise'] | dataset_filter=CASME_II | expr_filter=micro-expression
+14:10:52 | AblationOrchestrator |   protocol=holdout | epochs=2 | batch=4 | loss=focal
+14:10:52 | AblationOrchestrator | ==============================================================================
+14:10:52 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:10:52 | AblationOrchestrator | CONFIG config_1_pure_base [phase I] | -EVM -SimAM -CNN3D -SLSTT
+14:10:52 | AblationOrchestrator | Loaded CSV: 255 rows
+14:10:52 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:10:52 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:10:52 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:10:52 | AblationOrchestrator | Dataset ready: 151 samples | 3 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors_raw
+14:10:52 | AblationOrchestrator | Subject-disjoint split (seed=42): train=20 subj/112 samp | val=5 subj/39 samp | val_subjects=[10, 13, 17, 20, 21]
+14:10:52 | AblationOrchestrator | Loaded CSV: 255 rows
+14:10:52 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:10:52 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:10:52 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:10:52 | AblationOrchestrator | Dataset ready: 151 samples | 3 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors_raw
+14:10:52 | AblationOrchestrator |   components={'cnn_backbone': False, 'simam_attention': False, 'transformer': False} | trainable_params=5187
+14:10:53 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:10:53 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:10:54 | AblationOrchestrator | epoch   1/2 | train_loss=1.1777 | val_loss=1.0872 | val_acc=0.0256 | val_macroF1=0.0167 | time=1.3s
+14:10:55 | AblationOrchestrator | epoch   2/2 | train_loss=1.0922 | val_loss=0.8689 | val_acc=0.0256 | val_macroF1=0.0167 | time=1.0s
+14:10:55 | AblationOrchestrator | Best epoch 2 -> val_acc=0.0256 | val_macroF1=0.0167 | Peak VRAM: 91.4 MB
+14:10:55 | AblationOrchestrator |   RESULT config_1_pure_base -> acc=0.0256 | macroF1=0.0167
+14:10:56 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:10:56 | AblationOrchestrator | CONFIG config_3_spatial_only [phase I] | -EVM -SimAM +CNN3D -SLSTT
+14:10:56 | AblationOrchestrator | Subject-disjoint split (seed=42): train=20 subj/112 samp | val=5 subj/39 samp | val_subjects=[10, 13, 17, 20, 21]
+14:10:56 | AblationOrchestrator | Loaded CSV: 255 rows
+14:10:56 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:10:56 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:10:56 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:10:56 | AblationOrchestrator | Dataset ready: 151 samples | 3 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors_raw
+14:10:56 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': False, 'transformer': False} | trainable_params=15027
+14:10:56 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:10:57 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:10:57 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:00 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:01 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:09 | AblationOrchestrator | epoch   1/2 | train_loss=1.6309 | val_loss=0.5590 | val_acc=0.2308 | val_macroF1=0.1250 | time=13.8s
+14:11:23 | AblationOrchestrator | epoch   2/2 | train_loss=1.3900 | val_loss=0.3354 | val_acc=0.5385 | val_macroF1=0.3463 | time=13.9s
+14:11:23 | AblationOrchestrator | Best epoch 2 -> val_acc=0.5385 | val_macroF1=0.3463 | Peak VRAM: 7379.2 MB
+14:11:24 | AblationOrchestrator |   RESULT config_3_spatial_only -> acc=0.5385 | macroF1=0.3463
+14:11:24 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:11:24 | AblationOrchestrator | CONFIG config_7_full_no_attention [phase III] | +EVM -SimAM +CNN3D +SLSTT
+14:11:24 | AblationOrchestrator | Loaded CSV: 255 rows
+14:11:24 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:11:24 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:11:24 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:11:24 | AblationOrchestrator | Dataset ready: 151 samples | 3 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors
+14:11:24 | AblationOrchestrator | Subject-disjoint split (seed=42): train=20 subj/112 samp | val=5 subj/39 samp | val_subjects=[10, 13, 17, 20, 21]
+14:11:24 | AblationOrchestrator | Loaded CSV: 255 rows
+14:11:24 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:11:24 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:11:24 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:11:24 | AblationOrchestrator | Dataset ready: 151 samples | 3 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors
+14:11:24 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': False, 'transformer': True} | trainable_params=363763
+14:11:25 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:25 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:26 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:39 | AblationOrchestrator | epoch   1/2 | train_loss=1.4340 | val_loss=0.8254 | val_acc=0.0256 | val_macroF1=0.0167 | time=14.2s
+14:11:39 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:41 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:53 | AblationOrchestrator | epoch   2/2 | train_loss=1.2918 | val_loss=0.5573 | val_acc=0.0513 | val_macroF1=0.0781 | time=14.2s
+14:11:53 | AblationOrchestrator | Best epoch 2 -> val_acc=0.0513 | val_macroF1=0.0781 | Peak VRAM: 7384.6 MB
+14:11:54 | AblationOrchestrator |   RESULT config_7_full_no_attention -> acc=0.0513 | macroF1=0.0781
+14:11:54 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:11:54 | AblationOrchestrator | CONFIG config_8_proposed_unified [phase IV] | +EVM +SimAM +CNN3D +SLSTT
+14:11:54 | AblationOrchestrator | Subject-disjoint split (seed=42): train=20 subj/112 samp | val=5 subj/39 samp | val_subjects=[10, 13, 17, 20, 21]
+14:11:54 | AblationOrchestrator | Loaded CSV: 255 rows
+14:11:54 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:11:54 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:11:54 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:11:54 | AblationOrchestrator | Dataset ready: 151 samples | 3 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors
+14:11:54 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': True, 'transformer': True} | trainable_params=363763
+14:11:55 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:56 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:56 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:11:57 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:10 | AblationOrchestrator | epoch   1/2 | train_loss=1.8632 | val_loss=0.7414 | val_acc=0.0256 | val_macroF1=0.0167 | time=16.1s
+14:12:26 | AblationOrchestrator | epoch   2/2 | train_loss=1.1200 | val_loss=0.4102 | val_acc=0.2051 | val_macroF1=0.1922 | time=16.2s
+14:12:26 | AblationOrchestrator | Best epoch 2 -> val_acc=0.2051 | val_macroF1=0.1922 | Peak VRAM: 10030.6 MB
+14:12:27 | AblationOrchestrator |   RESULT config_8_proposed_unified -> acc=0.2051 | macroF1=0.1922
+14:12:27 | AblationOrchestrator | ==============================================================================
+14:12:27 | AblationOrchestrator |   Ablation sweep complete. Summary CSV: /home/pantaddh/Desktop/Addy thesis/Thesis latest4/Ablation_Study/results/summary.csv
+14:12:27 | AblationOrchestrator | ==============================================================================
+14:12:31 | AblationOrchestrator | ==============================================================================
+14:12:31 | AblationOrchestrator |   Ablation Orchestrator
+14:12:31 | AblationOrchestrator |   device=cuda | label_mode=individual | classes=['happiness', 'disgust', 'sadness', 'fear', 'repression', 'surprise'] | dataset_filter=CASME_II | expr_filter=micro-expression
+14:12:31 | AblationOrchestrator |   protocol=holdout | epochs=2 | batch=4 | loss=focal
+14:12:31 | AblationOrchestrator | ==============================================================================
+14:12:31 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:12:31 | AblationOrchestrator | CONFIG config_1_pure_base [phase I] | -EVM -SimAM -CNN3D -SLSTT
+14:12:31 | AblationOrchestrator | Loaded CSV: 255 rows
+14:12:31 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:12:31 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:12:31 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:12:31 | AblationOrchestrator | Dataset ready: 151 samples | 6 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors_raw
+14:12:31 | AblationOrchestrator | Subject-disjoint split (seed=42): train=20 subj/112 samp | val=5 subj/39 samp | val_subjects=[10, 13, 17, 20, 21]
+14:12:31 | AblationOrchestrator | Loaded CSV: 255 rows
+14:12:31 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:12:31 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:12:31 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:12:31 | AblationOrchestrator | Dataset ready: 151 samples | 6 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors_raw
+14:12:31 | AblationOrchestrator |   components={'cnn_backbone': False, 'simam_attention': False, 'transformer': False} | trainable_params=5478
+14:12:32 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:32 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:33 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:33 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:33 | AblationOrchestrator | epoch   1/2 | train_loss=1.6527 | val_loss=1.7171 | val_acc=0.2564 | val_macroF1=0.0680 | time=1.2s
+14:12:34 | AblationOrchestrator | epoch   2/2 | train_loss=1.9050 | val_loss=1.6957 | val_acc=0.2564 | val_macroF1=0.0680 | time=1.0s
+14:12:34 | AblationOrchestrator | Best epoch 2 -> val_acc=0.2564 | val_macroF1=0.0680 | Peak VRAM: 91.4 MB
+14:12:34 | AblationOrchestrator |   RESULT config_1_pure_base -> acc=0.2564 | macroF1=0.0680
+14:12:35 | AblationOrchestrator | ------------------------------------------------------------------------------
+14:12:35 | AblationOrchestrator | CONFIG config_8_proposed_unified [phase IV] | +EVM +SimAM +CNN3D +SLSTT
+14:12:35 | AblationOrchestrator | Loaded CSV: 255 rows
+14:12:35 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:12:35 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:12:35 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:12:35 | AblationOrchestrator | Dataset ready: 151 samples | 6 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors
+14:12:35 | AblationOrchestrator | Subject-disjoint split (seed=42): train=20 subj/112 samp | val=5 subj/39 samp | val_subjects=[10, 13, 17, 20, 21]
+14:12:35 | AblationOrchestrator | Loaded CSV: 255 rows
+14:12:35 | AblationOrchestrator | Dataset filter 'CASME_II' -> 255 rows
+14:12:35 | AblationOrchestrator | Expression filter 'micro-expression' -> 255 rows
+14:12:35 | AblationOrchestrator | Tensor matching: matched=151 missing=5 unknown_emotion=99
+14:12:35 | AblationOrchestrator | Dataset ready: 151 samples | 6 classes | 26 subjects | tensors=/home/pantaddh/Desktop/Addy thesis/Thesis latest4/Processed_Data/tensors
+14:12:35 | AblationOrchestrator |   components={'cnn_backbone': True, 'simam_attention': True, 'transformer': True} | trainable_params=364054
+14:12:36 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:36 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:37 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:42 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:43 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:12:51 | AblationOrchestrator | epoch   1/2 | train_loss=1.7577 | val_loss=2.5602 | val_acc=0.0256 | val_macroF1=0.0083 | time=16.1s
+14:13:01 | AblationOrchestrator | NaN gradient detected! Skipping optimizer step.
+14:13:07 | AblationOrchestrator | epoch   2/2 | train_loss=1.5900 | val_loss=2.5277 | val_acc=0.0000 | val_macroF1=0.0000 | time=16.1s
+14:13:07 | AblationOrchestrator | Best epoch 1 -> val_acc=0.0256 | val_macroF1=0.0083 | Peak VRAM: 10030.6 MB
+14:13:08 | AblationOrchestrator |   RESULT config_8_proposed_unified -> acc=0.0256 | macroF1=0.0083
+14:13:09 | AblationOrchestrator | ==============================================================================
+14:13:09 | AblationOrchestrator |   Ablation sweep complete. Summary CSV: /home/pantaddh/Desktop/Addy thesis/Thesis latest4/Ablation_Study/results_individual/summary.csv
+14:13:09 | AblationOrchestrator | ==============================================================================
