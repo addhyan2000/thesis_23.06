@@ -1,5 +1,5 @@
 config_name,use_evm,use_simam,use_cnn,use_transformer,accuracy,macro_f1,num_samples
-config_1_pure_base__no_evm__no_simam__no_3dcnn__no_transformer,False,False,False,False,0.0256,0.0167,39
-config_3_spatial_only__no_evm__no_simam__WITH_3dcnn__no_transformer,False,False,True,False,0.5385,0.3463,39
-config_7_full_no_attention__WITH_evm__no_simam__WITH_3dcnn__WITH_transformer,True,False,True,True,0.0513,0.0781,39
-config_8_proposed_unified__WITH_evm__WITH_simam__WITH_3dcnn__WITH_transformer,True,True,True,True,0.2051,0.1922,39
+config_1_pure_base__no_evm__no_simam__no_3dcnn__no_transformer,False,False,False,False,0.6667,0.3133,39
+config_3_spatial_only__no_evm__no_simam__WITH_3dcnn__no_transformer,False,False,True,False,0.7436,0.4270,39
+config_7_full_no_attention__WITH_evm__no_simam__WITH_3dcnn__WITH_transformer,True,False,True,True,0.6667,0.3977,39
+config_8_proposed_unified__WITH_evm__WITH_simam__WITH_3dcnn__WITH_transformer,True,True,True,True,0.6154,0.3154,39
